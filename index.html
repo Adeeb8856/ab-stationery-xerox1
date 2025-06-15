@@ -1,90 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AB Stationery & Xerox</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AB Tech & Print Solutions</title>
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f8f9fa;
-      margin: 0;
-      padding: 0;
+    :root {
+      --primary: #0052cc;
+      --accent: #00d1ff;
+      --bg-light: #f9f9f9;
+      --text-dark: #222;
+      --max-width: 1200px;
     }
-    header {
-      background: #2a4365;
-      color: white;
-      padding: 20px;
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Verdana', sans-serif; color: var(--text-dark); line-height: 1.6; }
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 60px 20px; }
+    header.hero {
+      background: var(--primary) url('hero-bg.jpg') center/cover no-repeat;
+      color: white; padding: 120px 20px;
       text-align: center;
-      font-size: 28px;
     }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-      background: white;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      border-radius: 10px;
+    header.hero h1 { font-size: 3em; margin-bottom: 0.5em; }
+    header.hero p { font-size: 1.2em; margin-bottom: 1em; }
+    header.hero .cta { background: var(--accent); color: #fff; padding: 1em 2em; border: none; font-size: 1em; cursor: pointer; }
+    section.services { background: var(--bg-light); }
+    .services .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+      gap: 30px;
     }
-    img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 20px;
+    .service-card {
+      background: white; padding: 20px;
+      border-radius: 8px; text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
-    h2 {
-      color: #2a4365;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 8px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 50px;
-      text-decoration: none;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    section.gallery .grid img {
+      width: 100%; height: auto;
+      border-radius: 8px;
     }
     footer {
-      background: #2a4365;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      margin-top: 30px;
+      background: #333; color: #fff;
+      text-align: center; padding: 40px 20px;
+    }
+    @media (max-width: 750px) {
+      header.hero { padding: 80px 20px; }
+      header.hero h1 { font-size: 2.2em; }
     }
   </style>
 </head>
 <body>
 
-  <header>AB Stationery & Xerox</header>
+  <header class="hero">
+    <h1>Innovative Print & Tech Solutions</h1>
+    <p>Your local partner for stationery, Xerox, PVC-printing & digital tech services.</p>
+    <button class="cta">Get Started</button>
+  </header>
 
-  <div class="container">
-    <img src="9.jpg" alt="Shop Front" />
+  <section class="services container">
     <h2>Our Services</h2>
-    <ul>
-      <li>Xerox & Color Print</li>
-      <li>Lamination & PVC Cards</li>
-      <li>Passport Size Photos</li>
-      <li>Online Form Filling (NEET, CET, etc.)</li>
-      <li>All Stationery Items</li>
-    </ul>
+    <div class="grid">
+      <div class="service-card">Xerox (B&W & Color)</div>
+      <div class="service-card">Lamination</div>
+      <div class="service-card">PVC Card Printing</div>
+      <div class="service-card">Online Form‑Filling</div>
+      <div class="service-card">Passport‑size Photos</div>
+    </div>
+  </section>
 
-    <h2>Location</h2>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=https://adeeb8856.github.io/ab-stationery-xerox1/"
-      width="100%" height="250" style="border:0;" allowfullscreen loading="lazy">
-    </iframe>
-  </div>
+  <section class="gallery container">
+    <h2>Our Projects</h2>
+    <div class="grid">
+      <img src="project1.jpg" alt="Project sample 1">
+      <img src="project2.jpg" alt="Project sample 2">
+      <!-- Add more -->
+    </div>
+  </section>
 
-  <a class="whatsapp" href="https://wa.me/918856003599" target="_blank">
-    💬 WhatsApp
-  </a>
+  <section class="container">
+    <h2>About Us</h2>
+    <p>AB Tech & Print Solutions, led by Adeeb Bagwan, has served the Beed community since 2010...</p>
+  </section>
 
-  <footer>&copy; 2025 AB Stationery & Xerox</footer>
+  <footer>
+    <div class="container">
+      <h3>Contact Us</h3>
+      <p>📞 8856003599 • ✉️ adeeb.bagwan.123@gmail.com</p>
+      <p>Address: Near Uma Kiran, Pangri Road, Shahu Nagar, Beed</p>
+      <p>&copy; 2025 AB Tech & Print Solutions</p>
+    </div>
+  </footer>
+
 </body>
 </html>
