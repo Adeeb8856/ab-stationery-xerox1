@@ -2,92 +2,101 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AB Stationery & Xerox</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: #003566;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .hero {
+      text-align: center;
+      padding: 30px;
+    }
+    .hero img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .content {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .content h2 {
+      color: #003566;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
+    }
     .whatsapp-button {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      z-index: 50;
+      background: #25D366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .whatsapp-button:hover {
+      background: #1ebe5b;
+    }
+    footer {
+      background: #003566;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
     }
   </style>
 </head>
-<body class="bg-yellow-50 text-gray-800">
+<body>
 
-  <!-- Header -->
-  <header class="bg-yellow-400 py-6 shadow-md">
-    <div class="text-center">
-      <h1 class="text-3xl font-bold uppercase">AB Stationery & Xerox</h1>
-      <p class="text-sm mt-2">One Stop for All Your Printing Needs</p>
-    </div>
+  <header>
+    AB Stationery & Xerox
   </header>
 
-  <!-- Main Content -->
-  <main class="max-w-5xl mx-auto p-6">
-    
-    <!-- Services -->
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold border-b-2 border-yellow-300 pb-2">Services Offered</h2>
-      <ul class="list-disc list-inside mt-4 space-y-1 text-lg">
-        <li>All Type of Stationery</li>
-        <li>Black & Color Xerox</li>
-        <li>Color Printing</li>
-        <li>Lamination</li>
-        <li>PVC Card Printing</li>
-        <li>Passport Size Photo</li>
-        <li>All Type of Online Print</li>
-      </ul>
-    </section>
+  <div class="hero">
+    <img src="9.jpg" alt="Shop Image" />
+  </div>
 
-    <!-- Owner Info -->
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold border-b-2 border-yellow-300 pb-2">Owner Information</h2>
-      <p class="mt-2"><strong>Name:</strong> Adeeb Bagwan</p>
-      <p><strong>Phone:</strong> <a href="tel:8856003599" class="text-blue-600 underline">8856003599</a></p>
-      <p><strong>Email:</strong> <a href="mailto:adeeb.bagwan.123@gmail.com" class="text-blue-600 underline">adeeb.bagwan.123@gmail.com</a></p>
-    </section>
+  <div class="content">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Xerox & Color Printing</li>
+      <li>Lamination & PVC Card Print</li>
+      <li>Passport Size Photo</li>
+      <li>Online Form Filling (NEET, CET, etc.)</li>
+      <li>Stationery Items</li>
+    </ul>
 
-    <!-- Location with Google Maps -->
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold border-b-2 border-yellow-300 pb-2">Location</h2>
-      <p class="mt-2 mb-4">Near Uma Kiran Complex, Pangri Road, Shahu Nagar, Beed</p>
-      <iframe 
-        src="https://www.google.com/maps?q=Uma+Kiran+Complex,+Pangri+Road,+Shahu+Nagar,+Beed&output=embed"
-        width="100%" 
-        height="300" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy">
-      </iframe>
-    </section>
+    <h2>Location</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
 
-    <!-- Gallery Section -->
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold border-b-2 border-yellow-300 pb-2">Shop Gallery</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4">
-        <img src="shop1.jpg" alt="Shop Image 1" class="rounded shadow">
-        <img src="shop2.jpg" alt="Shop Image 2" class="rounded shadow">
-        <img src="shop3.jpg" alt="Shop Image 3" class="rounded shadow">
-      </div>
-      <p class="text-sm mt-2 text-gray-600">* Replace the above images with real photos of your shop.</p>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-yellow-400 py-4 text-center mt-12">
-    <p class="text-sm">© 2025 AB Stationery & Xerox. All rights reserved.</p>
-  </footer>
-
-  <!-- WhatsApp Chat Button -->
-  <a 
-    href="https://wa.me/918856003599?text=Hello%20AB%20Stationery%20%26%20Xerox%2C%20I%20am%20interested%20in%20your%20services" 
-    target="_blank" 
-    class="whatsapp-button">
-    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="Chat on WhatsApp">
+  <a class="whatsapp-button" href="https://wa.me/918856003599" target="_blank">
+    💬 Chat on WhatsApp
   </a>
+
+  <footer>
+    &copy; 2025 AB Stationery & Xerox. All rights reserved.
+  </footer>
 
 </body>
 </html>
