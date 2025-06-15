@@ -164,7 +164,7 @@
 
   <section id="contact" class="container hidden">
     <h2>Contact Us</h2>
-    <form onsubmit="return validateForm()">
+    <form onsubmit="return sendWhatsAppMessage(event)">
       <input type="text" id="name" placeholder="Your Name" required />
       <input type="email" id="email" placeholder="Your Email" required />
       <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
@@ -183,8 +183,6 @@
     // Preloader
     window.onload = function () {
       setTimeout(() => document.getElementById('preloader').style.display = 'none', 1000);
-
-      // Welcome message once
       if (!localStorage.getItem('welcomed')) {
         alert('Welcome to AB Stationery & Xerox!');
         localStorage.setItem('welcomed', 'true');
@@ -194,11 +192,7 @@
     // Scroll to top
     window.onscroll = function () {
       const btn = document.getElementById("topBtn");
-      if (window.scrollY > 200) {
-        btn.style.display = "block";
-      } else {
-        btn.style.display = "none";
-      }
+      btn.style.display = window.scrollY > 200 ? "block" : "none";
     };
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -206,19 +200,6 @@
 
     function alertCTA() {
       alert("Thank you for your interest! We'll contact you shortly.");
-    }
-
-    // Validate form
-    function validateForm() {
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
-      if (!name || !email || !message) {
-        alert('Please fill in all fields.');
-        return false;
-      }
-      alert('Form submitted successfully!');
-      return true;
     }
 
     // Animate on scroll
@@ -229,8 +210,27 @@
         }
       });
     });
-
     document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
+
+    // Send message to WhatsApp
+    function sendWhatsAppMessage(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !email || !message) {
+        alert('Please fill in all fields.');
+        return false;
+      }
+
+      const whatsappURL = `https://wa.me/918856003599?text=${encodeURIComponent(
+        `New Inquiry from Website:%0AName: ${name}%0AEmail: ${email}%0AMessage: ${message}`
+      )}`;
+
+      window.open(whatsappURL, '_blank');
+      return false;
+    }
   </script>
 </body>
 </html>
