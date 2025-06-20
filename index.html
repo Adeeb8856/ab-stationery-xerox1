@@ -1,223 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta name="referrer" content="no-referrer">
+  <meta name="permissions-policy" content="geolocation=(), microphone=()">
   <title>AB Stationery & Xerox</title>
-  <style>
-    :root {
-      --primary: #0052cc;
-      --accent: #00d1ff;
-      --bg-light: #f9f9f9;
-      --text-dark: #222;
-      --max-width: 1200px;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
-    body { font-family: 'Verdana', sans-serif; color: var(--text-dark); overflow-x: hidden; }
-    .hidden { opacity: 0; transform: translateY(30px); transition: opacity 0.6s, transform 0.6s; }
-    .show { opacity: 1; transform: translateY(0); }
-
-    #preloader {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: white;
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    nav {
-      background: #222;
-      text-align: center;
-      padding: 15px;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    header.hero {
-      background: var(--primary);
-      color: white;
-      padding: 100px 20px;
-      text-align: center;
-    }
-    .hero .cta {
-      margin-top: 20px;
-      background: var(--accent);
-      color: #fff;
-      padding: 12px 24px;
-      border: none;
-      font-size: 1em;
-      cursor: pointer;
-    }
-
-    .container {
-      max-width: var(--max-width);
-      margin: auto;
-      padding: 60px 20px;
-    }
-
-    .services .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .service-card {
-      background: white;
-      border: 2px solid #ccc;
-      padding: 20px;
-      text-align: center;
-      border-radius: 8px;
-      transition: transform 0.3s;
-    }
-    .service-card:hover {
-      transform: translateY(-5px);
-    }
-
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    form button {
-      padding: 10px 20px;
-      background: var(--primary);
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-    }
-
-    #topBtn {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      display: none;
-      background: var(--accent);
-      color: white;
-      padding: 12px 16px;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-    }
-
-    #whatsapp {
-      position: fixed;
-      bottom: 100px;
-      right: 30px;
-      background-color: #25D366;
-      color: white;
-      padding: 14px;
-      border-radius: 50%;
-      text-align: center;
-      font-size: 20px;
-      z-index: 999;
-      text-decoration: none;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="preloader">Loading...</div>
-
   <nav>
-    <a href="Service.html">Services</a>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <header class="hero hidden">
-    <h1>AB Stationery & Xerox</h1>
-    <p>Complete Printing and Digital Solutions</p>
-    <button class="cta" onclick="alertCTA()">Get Quote</button>
+  <header class="hero">
+    <div class="hero-text">
+      <h1>AB Stationery & Xerox</h1>
+      <p>For your writing needs — The best stationery ever.</p>
+      <p>Prints so good, you can't look away.</p>
+    </div>
+    <div class="hero-image">
+      <img src="printer.jfif" alt="Printer Image">
+    </div>
   </header>
 
-  <section id="services" class="services container hidden">
+  <section class="intro">
+    <h2>Why Choose Us?</h2>
+    <p>We offer quality stationery and printing services at affordable rates. From color prints to lamination and PVC cards, we handle it all with care and speed.</p>
+  </section>
+
+  <section class="services-preview">
     <h2>Our Services</h2>
-    <div class="grid">
-      <div class="service-card">Xerox (Black & Color)</div>
-      <div class="service-card">Lamination</div>
-      <div class="service-card">PVC Card Printing</div>
-      <div class="service-card">Online Form Filling</div>
-      <div class="service-card">Passport Size Photos</div>
+    <div class="preview-grid">
+      <img src="S.jpg" alt="Stationery Items" class="preview-img">
+      <ul>
+        <li>Xerox (Black & Color)</li>
+        <li>Lamination</li>
+        <li>PVC Card Printing</li>
+        <li>Online Form Filling</li>
+        <li>Passport Size Photos</li>
+      </ul>
+      <a href="services.html" class="btn">Explore All Services →</a>
     </div>
   </section>
 
-  <section id="location" class="container hidden">
-    <h2>Our Location</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d943.1363353378391!2d75.7496761696251!3d18.995676566959638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc52b545cc8f763%3A0x66c7257df4a1f735!2sAB%20Stationery%20%26%20Xerox!5e0!3m2!1sen!2sin!4v1750003666003!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <section class="map">
+    <h2>Visit Us</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d943.1363353378391!2d75.7496761696251!3d18.995676566959638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc52b545cc8f763%3A0x66c7257df4a1f735!2sAB%20Stationery%20%26%20Xerox!5e0!3m2!1sen!2sin!4v1750003666003!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </section>
 
-  <section id="contact" class="container hidden">
+  <section class="contact" id="contact">
     <h2>Contact Us</h2>
     <form action="https://formsubmit.co/adeeb.bagwan.123@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send</button>
+      <button type="submit">Send Message</button>
     </form>
   </section>
 
-  <footer class="hidden">
-    &copy; 2025 AB Stationery & Xerox. All rights reserved.
+  <footer>
+    <p>&copy; 2025 AB Stationery & Xerox. All rights reserved.</p>
   </footer>
 
-  <button onclick="scrollToTop()" id="topBtn" title="Go to top">↑</button>
-  <a href="https://wa.me/918856003599" target="_blank" id="whatsapp" title="Chat on WhatsApp">💬</a>
-
-  <script>
-    // Preloader
-    window.onload = function () {
-      setTimeout(() => document.getElementById('preloader').style.display = 'none', 1000);
-
-      // Welcome message once
-      if (!localStorage.getItem('welcomed')) {
-        alert('Welcome to AB Stationery & Xerox!');
-        localStorage.setItem('welcomed', 'true');
-      }
-    };
-
-    // Scroll to top
-    window.onscroll = function () {
-      const btn = document.getElementById("topBtn");
-      if (window.scrollY > 200) {
-        btn.style.display = "block";
-      } else {
-        btn.style.display = "none";
-      }
-    };
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function alertCTA() {
-      alert("Thank you for your interest! We'll contact you shortly.");
-    }
-
-    // Animate on scroll
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-        }
-      });
-    });
-
-    document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
-  </script>
+  <a href="https://wa.me/918856003599" id="whatsapp" target="_blank">💬</a>
 </body>
 </html>
