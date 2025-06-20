@@ -36,7 +36,7 @@
   <div id="preloader">Loading...</div>
   <header>
     <h1>AB Stationery & Xerox</h1>
-    <p class="slogan">For your writing needs – The best stationery ever.</p>
+    <p class="slogan">Prints so Good, You Can't Look Away</p>
     <nav>
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
@@ -47,23 +47,27 @@
   <div class="container">
     <div class="service">
       <h3>Xerox (Black & Color)</h3>
-      <p>High-quality printing in both black & white and vibrant color at affordable rates.</p>
+      <p>Affordable and fast Xerox services in both color and black & white formats.</p>
     </div>
     <div class="service">
       <h3>Lamination</h3>
-      <p>Protect your important documents with our professional lamination services.</p>
+      <p>Secure and preserve your documents with quality lamination.</p>
+    </div>
+    <div class="service">
+      <h3>Color Printing</h3>
+      <p>Print your photos, flyers, and more in rich and vibrant colors.</p>
+    </div>
+    <div class="service">
+      <h3>Online Print Services</h3>
+      <p>Send us your files via WhatsApp and get your prints instantly.</p>
     </div>
     <div class="service">
       <h3>PVC Card Printing</h3>
-      <p>We print custom PVC cards for ID badges, access cards, and more.</p>
-    </div>
-    <div class="service">
-      <h3>Online Form Filling</h3>
-      <p>Quick and reliable online form filling services to help you submit forms easily.</p>
+      <p>Custom PVC card printing for ID cards, badges, and more.</p>
     </div>
     <div class="service">
       <h3>Passport Size Photos</h3>
-      <p>Instant passport-size photo printing for all your ID needs.</p>
+      <p>Quick passport-size photo printing while you wait.</p>
     </div>
 
     <div class="images">
@@ -95,13 +99,15 @@
     services.forEach(service => observer.observe(service));
 
     if (!localStorage.getItem('visited')) {
-      alert("Welcome to AB Stationery & Xerox Website!");
+      alert("Welcome to AB Stationery & Xerox Services Page!");
       localStorage.setItem('visited', 'true');
     }
 
-    window.addEventListener('load', () => {
+    window.addEventListener('load', function () {
       const preloader = document.getElementById('preloader');
-      if (preloader) preloader.style.display = 'none';
+      if (preloader) {
+        preloader.style.display = 'none';
+      }
     });
   </script>
 </body>
