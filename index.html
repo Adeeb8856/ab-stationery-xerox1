@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AB Stationery & Xerox</title>
-  
-  <!-- Basic Security Meta Tags -->
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="Referrer-Policy" content="strict-origin">
+
+  <!-- Safe and Effective Meta Tags -->
   <meta name="description" content="AB Stationery & Xerox - Your trusted place for printing, Xerox, lamination, passport photo, PVC cards and more.">
+  <meta name="referrer" content="strict-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
 
   <style>
     * {
@@ -27,7 +27,6 @@
       padding: 20px 0;
       text-align: center;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      position: relative;
     }
 
     header h1 {
@@ -38,11 +37,10 @@
     header p {
       font-size: 1.2em;
       color: #ddd;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
 
     nav {
-      text-align: center;
       margin-top: 10px;
     }
 
@@ -59,7 +57,6 @@
 
     nav a:hover {
       background-color: #1abc9c;
-      color: #fff;
     }
 
     section {
@@ -89,7 +86,7 @@
       padding: 20px;
       border-radius: 8px;
       text-align: center;
-      transition: 0.3s;
+      transition: background 0.3s;
     }
 
     .service:hover {
@@ -131,3 +128,69 @@
     @media (max-width: 600px) {
       header h1 { font-size: 1.8em; }
       header p { font-size: 1em; }
+      nav a {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>AB Stationery & Xerox</h1>
+    <p>All Type of Print, Xerox, Online Forms, and More</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service">
+        <h3>Black & White Xerox</h3>
+        <p>High quality Xerox starting ₹1/- only</p>
+      </div>
+      <div class="service">
+        <h3>Color Printing</h3>
+        <p>As-it-is photo print at ₹10/- per page</p>
+      </div>
+      <div class="service">
+        <h3>Online Forms</h3>
+        <p>All types of online services with print</p>
+      </div>
+      <div class="service">
+        <h3>Passport Size Photo</h3>
+        <p>Instant passport photo prints & email</p>
+      </div>
+      <div class="service">
+        <h3>PVC Card Print</h3>
+        <p>Smart card quality PVC printing</p>
+      </div>
+      <div class="service">
+        <h3>Lamination</h3>
+        <p>Protect your documents with lamination</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>📍 Near Uma Kiran Complex, Shahu Nagar, Beed – 431122</p>
+    <p>📞 Call or WhatsApp: <b>8856003599</b></p>
+    <p>&copy; 2025 AB Stationery & Xerox</p>
+  </footer>
+
+  <!-- WhatsApp Button -->
+  <div class="whatsapp">
+    <a href="https://wa.me/918856003599" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat">
+    </a>
+  </div>
+
+</body>
+</html>
