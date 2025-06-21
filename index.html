@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AB Stationery & Xerox</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #f7f7f7;
+      color: #333;
+    }
+
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 5px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #ddd;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .service {
+      background: #ecf0f1;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .service:hover {
+      background: #d0dce4;
+    }
+
+    .service h3 {
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #2c3e50;
+      color: white;
+    }
+
+    /* WhatsApp Floating Button */
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+    }
+
+    .whatsapp img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.2s;
+    }
+
+    .whatsapp img:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.8em; }
+      header p { font-size: 1em; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>AB Stationery & Xerox</h1>
+    <p>All Type of Print, Xerox, Online Forms, and More</p>
+  </header>
+
+  <section>
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service">
+        <h3>Black & White Xerox</h3>
+        <p>High quality Xerox starting ₹1/- only</p>
+      </div>
+      <div class="service">
+        <h3>Color Printing</h3>
+        <p>As-it-is photo print at ₹10/- per page</p>
+      </div>
+      <div class="service">
+        <h3>Online Forms</h3>
+        <p>All types of online services with print</p>
+      </div>
+      <div class="service">
+        <h3>Passport Size Photo</h3>
+        <p>Instant passport photo prints & email</p>
+      </div>
+      <div class="service">
+        <h3>PVC Card Print</h3>
+        <p>Smart card quality PVC printing</p>
+      </div>
+      <div class="service">
+        <h3>Lamination</h3>
+        <p>Protect your documents with lamination</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>📍 Visit us today | 📞 Call or WhatsApp: <b>8856003599</b></p>
+    <p>&copy; 2025 AB Stationery & Xerox</p>
+  </footer>
+
+  <!-- WhatsApp Button -->
+  <div class="whatsapp">
+    <a href="https://wa.me/918856003599" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat">
+    </a>
+  </div>
+
+</body>
+</html>
